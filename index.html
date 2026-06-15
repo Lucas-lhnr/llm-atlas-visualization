@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LLM Atlas – 3D Informationsvisualisierung</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="app">
+    <aside class="panel left-panel">
+      <h1>Filter</h1>
+
+      <div class="legend-block">
+        <h2>Achsen</h2>
+        <div><span class="axis x"></span> X = Coding</div>
+        <div><span class="axis y"></span> Y = Knowledge</div>
+        <div><span class="axis z"></span> Z = Agentic</div>
+      </div>
+
+      <div class="controls">
+        <div class="creator-filter-block">
+          <div class="control-title">Entwickler</div>
+
+          <label class="checkbox-row">
+            <input id="allCreatorsToggle" type="checkbox" checked />
+            Alle Entwickler
+          </label>
+
+          <div id="creatorCheckboxes" class="creator-checkbox-grid"></div>
+        </div>
+
+        <label>
+          Quelltyp
+          <select id="sourceFilter">
+            <option value="all">Alle Typen</option>
+          </select>
+        </label>
+
+        <label>
+          Mindest-Overall-Score: <span id="scoreValue">0</span>
+          <input id="scoreFilter" type="range" min="0" max="100" value="0" />
+        </label>
+
+        <label class="checkbox-row">
+          <input id="advancedFilter" type="checkbox" />
+          Erweiterte Filter
+        </label>
+
+        <div id="advancedControls" class="advanced-controls disabled">
+          <label>
+            Mindest-Coding: <span id="codingValue">0</span>
+            <input id="codingFilter" type="range" min="0" max="100" value="0" disabled />
+          </label>
+
+          <label>
+            Mindest-Knowledge: <span id="knowledgeValue">0</span>
+            <input id="knowledgeFilter" type="range" min="0" max="100" value="0" disabled />
+          </label>
+
+          <label>
+            Mindest-Agentic: <span id="agenticValue">0</span>
+            <input id="agenticFilter" type="range" min="0" max="100" value="0" disabled />
+          </label>
+        </div>
+      </div>
+
+      <div class="panel-footer">
+  <button id="resetView">Ansicht zurücksetzen</button>
+</div>
+    </aside>
+
+    <main id="scene"></main>
+
+    <div class="search-panel">
+  <input
+    id="modelSearch"
+    type="text"
+    placeholder="Modell suchen..."
+  />
+</div>
+
+    <div class="bottom-panel">
+
+  
+
+  <div>
+    <div class="project-name">LLM Atlas</div>
+    <div class="project-subtitle">3D-Benchmark-Explorer für KI-Sprachmodelle</div>
+    <div class="visible-counter">
+      Sichtbare Modelle: <span id="visibleCount">0</span>
+    </div>
+  </div>
+
+</div>
+
+    <aside class="panel right-panel">
+      <h2>Details</h2>
+      <div id="details" class="details empty">
+        Wähle ein Modell aus.
+      </div>
+
+      <hr />
+
+      <h2>Visual Encoding</h2>
+      <p><b>Position</b>: Coding, Knowledge, Agentic</p>
+      <p><b>Größe</b>: Overall Score</p>
+      <p><b>Farbe</b>: Entwickler</p>
+      <p><b>Material</b>: Open / Proprietary</p>
+
+      <hr />
+
+      <h2>Steuerung</h2>
+      <p>Maus: drehen</p>
+      <p>Scrollen: zoomen</p>
+      <p>Rechtsklick: verschieben</p>
+      <p>Klick: Details</p>
+      <p>Shift + Klick: vergleichen</p>
+    </aside>
+  </div>
+
+  <div id="tooltip"></div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js"
+    }
+  }
+  </script>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

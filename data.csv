@@ -1,0 +1,51 @@
+rank,model,creator,sourceType,overallScore,coding,agentic,reasoning,knowledge,math,multimodalGrounded,multilingual,instructionFollowing,inputPrice,outputPrice
+1,"Claude Mythos 5","Anthropic",Proprietary,99,100,100,,99.5,,98.9,100,91.4,10,50
+2,"Claude Fable 5","Anthropic",Proprietary,97,100,100,,99.8,,79,100,92.7,10,50
+3,"Claude Opus 4.8","Anthropic",Proprietary,93,98,96.4,,98.7,,66.4,,,5,25
+4,"Gemini 3.1 Pro","Google",Proprietary,91,93,81.6,96.4,93.9,67.7,84,100,93.4,2,12
+5,"Qwen3.7 Max","Alibaba",Proprietary,91,91.6,86.9,94.8,85.9,,,84,93.4,,
+6,"GPT-5.4 Pro","OpenAI",Proprietary,90,90.6,89.6,97.5,59.9,92.8,100,,93.7,30,180
+7,"GPT-5.5","OpenAI",Proprietary,89,82.6,95.9,96.3,95.6,96.4,58,,,5,30
+8,"Gemini 3 Pro Deep Think","Google",Proprietary,89,73.4,93.9,88.5,86.7,94.8,100,82.1,81.6,,
+9,"Grok 4.1","xAI",Proprietary,89,81.7,76.6,97.6,93.7,99.4,97.8,96.9,90.6,,
+10,"GPT-5.4","OpenAI",Proprietary,88,87.2,84.5,95.6,98.5,94.4,59.6,100,96,2.5,15
+11,"Qwen3.7 Plus","Alibaba",Proprietary,88,87.7,85.3,100,79.2,,76,79.6,95.6,,
+12,"Claude Opus 4.6","Anthropic",Proprietary,86,85.5,81.3,88.2,90.1,86.3,76.7,100,95.3,5,25
+13,"Gemini 3.5 Flash","Google",Proprietary,86,77.3,95.1,79.4,82,,80,,78,1.5,9
+14,"DeepSeek V4 Pro (Max)","DeepSeek",Open Weight,86,89.7,87.7,,76.6,,,,,1.74,3.48
+15,"GPT-5.3 Codex","OpenAI",Proprietary,85,87.1,77.4,93,92,100,95.8,96.9,91.4,1.75,14
+16,"Claude Opus 4.7 (Adaptive)","Anthropic",Proprietary,84,93.5,86.2,90.7,99.6,71.2,45,,,5,25
+17,"GLM-5.1","Z.AI",Open Weight,82,82.8,79.7,64.8,83.9,89.2,,,92,1.4,4.4
+18,"Claude Sonnet 4.6","Anthropic",Proprietary,82,82,78.7,82.9,81.9,75.7,86.2,88.4,82.7,3,15
+19,"DeepSeek V4 Pro (High)","DeepSeek",Open Weight,82,86,82,,70.9,,,,,1.74,3.48
+20,"o1-preview","OpenAI",Proprietary,82,78.8,87.9,88.6,79.8,94.1,67.5,82,76.9,15,60
+21,"Kimi K2.6","Moonshot AI",Open Weight,81,89.8,82.7,,73.2,,71.3,,,0.95,4
+22,"Gemini 3 Pro","Google",Proprietary,80,72.4,70.6,82.4,82.3,80.3,81.2,79.2,79.5,2,12
+23,"MiniMax M3","MiniMax",Open Weight,79,84.6,85.3,,,,48.1,,,0.3,1.2
+24,"GLM-5 (Reasoning)","Z.AI",Open Weight,79,69.1,77,87.4,81.4,92.2,72.6,79.2,81,1,3.2
+25,"GPT-5.2","OpenAI",Proprietary,78,78.7,59.2,83.5,91.1,80.9,81.5,95.9,84.9,1.75,14
+26,"Qwen3.5 397B (Reasoning)","Alibaba",Open Weight,77,85.4,68.8,81.7,78,92.3,58.4,82.9,80.6,0.6,3.6
+27,"GPT-5.1","OpenAI",Proprietary,77,76,74.1,66.7,81.5,68.2,96.3,82.8,75.8,1.25,10
+28,"Claude Opus 4.5","Anthropic",Proprietary,76,75.6,73.5,69.6,83,94.9,61.2,81.4,63.2,5,25
+29,"GPT-5 (high)","OpenAI",Proprietary,76,69.7,74.8,76.3,78.9,70.2,93.3,79.2,80.7,1.25,10
+30,"GPT-5.2-Codex","OpenAI",Proprietary,76,77.5,77.5,87.8,77.4,97.7,89,84.8,91.6,1.75,14
+31,"Kimi K2.5 (Reasoning)","Moonshot AI",Proprietary,75,85,62,69.2,74,67.2,67.8,87.8,98.9,0.6,3
+32,"GPT-5.1-Codex-Max","OpenAI",Proprietary,75,75.2,75.5,88.4,78.2,97.2,90.1,82.8,87.9,1.25,10
+33,"DeepSeek V4 Flash (Max)","DeepSeek",Open Weight,74,82.2,68.8,,66.8,,,,,0.14,0.28
+34,"Qwen3.6-27B","Alibaba",Open Weight,72,77.9,69.5,,68.7,,65,,,0,0
+35,"Grok 4.20","xAI",Proprietary,71,76.4,54.5,64.7,,,47.6,,95.4,2,6
+36,"DeepSeek V4 Flash (High)","DeepSeek",Open Weight,71,82.5,60.6,,62.1,,,,,0.14,0.28
+37,"GPT-5 (medium)","OpenAI",Proprietary,70,77.7,68.1,74.1,73.3,91.7,90.6,83.8,76.9,,
+38,"Nemotron 3 Ultra","NVIDIA",Open Weight,68,80.4,51,44,73.8,,,72.8,96,0,0
+39,"DeepSeek V4 Pro","DeepSeek",Open Weight,68,68.4,66.5,,50.3,,,,,1.74,3.48
+40,"GLM-4.7","Z.AI",Open Weight,68,72.5,53.5,72.9,66.3,78.2,58.2,71.3,72.9,0,0
+41,"Grok 4.1 Fast","xAI",Proprietary,68,59.8,61.4,87.9,75.1,93.7,89.7,74.6,79.7,0.2,0.5
+42,"GLM-5","Z.AI",Open Weight,67,76.2,48.4,60.5,82.2,91.3,56,70.9,84.3,1,3.2
+43,"Qwen3.6 Plus","Alibaba",Proprietary,66,77.7,55.9,44.2,75.7,,71.6,77.6,91.8,,
+44,"MAI-Thinking-1","Microsoft",Proprietary,65,84.5,31.9,,64.6,98.4,,,100,,
+45,"Qwen3.6-35B-A3B","Alibaba",Open Weight,65,72.2,53.7,,65.5,,64,,,,
+46,"Claude Sonnet 4.5","Anthropic",Proprietary,64,78.4,54,62,73.7,87.7,94.8,84.8,84.2,3,15
+47,"Kimi K2.5","Moonshot AI",Open Weight,63,81,45,54.6,70.6,56.8,63.1,68.4,84.5,0.6,3
+48,"Qwen3.5-122B-A10B","Alibaba",Open Weight,63,70.7,55.4,39,80.2,,65.2,70.6,87.8,0,0
+49,"Gemini 2.5 Pro","Google",Proprietary,63,48.5,57.5,59,64.9,73.5,85.2,68.9,59,1.25,10
+50,"Grok 4","xAI",Proprietary,63,76,53.1,55.2,65.2,80,73,63.4,54.9,,
