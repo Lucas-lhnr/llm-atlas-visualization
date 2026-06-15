@@ -50,7 +50,7 @@ http://localhost:8000/
 
 Die Visualisierung ist über GitHub Pages erreichbar:
 
-[GitHub-Pages-Link hier einfügen]
+https://lucas-lhnr.github.io/llm-atlas-visualization/
 
 ## Lizenz / Hinweise
 
