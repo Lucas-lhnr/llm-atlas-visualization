@@ -1,4 +1,4 @@
-# KI Model Benchmark Explorer
+# Large Language Model Atlas
 
 Interaktive 3D-Visualisierung aktueller Large Language Models (LLMs) auf Basis verschiedener Benchmark-Kategorien.
 
