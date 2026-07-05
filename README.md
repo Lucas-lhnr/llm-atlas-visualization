@@ -1,34 +1,42 @@
-
 # KI Model Benchmark Explorer
 
-Interaktive 3D-Visualisierung aktueller KI-Sprachmodelle auf Basis verschiedener Benchmark-Kategorien.
+Interaktive 3D-Visualisierung aktueller Large Language Models (LLMs) auf Basis verschiedener Benchmark-Kategorien.
 
-## Inhalt
+## Live-Version
 
-Interaktive 3D-Visualisierung mit Three.js (index.html + main.js).
+Die Visualisierung ist über GitHub Pages erreichbar:
 
-Lokale Daten liegen im Projektverzeichnis. Wichtige Dateien:
+**https://lucas-lhnr.github.io/llm-atlas-visualization/**
 
-* data.csv — Datensatz mit Benchmark-Ergebnissen aktueller KI-Sprachmodelle
-* main.js — Erstellung der 3D-Szene, Datenverarbeitung und Interaktionen
-* style.css — Layout und Benutzeroberfläche
-* index.html — Hauptseite der Visualisierung
+---
 
-## Eigenschaften
+# Motivation
 
-* Interaktive 3D-Visualisierung mit Three.js
-* Rotierbare, verschiebbare und zoombare Ansicht mit OrbitControls
-* Farbkodierung nach Entwickler
-* Größenkodierung anhand des Overall Scores
-* Darstellung von Open-Weight- und proprietären Modellen
-* Dynamische Skalierung der Achsen auf Basis der vorhandenen Daten
-* Hover-Tooltips mit Modellinformationen
-* Detailansicht für ausgewählte Modelle
-* Vergleichsansicht zweier Modelle mittels Shift-Klick
-* Filter nach Entwickler und Quelltyp
-* Erweiterte Filter für Coding, Knowledge und Agentic
-* Suchfunktion für Modellnamen
-* Kamera-Reset und Anzeige der aktuell sichtbaren Modelle
+Mit der zunehmenden Anzahl leistungsfähiger KI-Sprachmodelle wird deren Vergleich immer komplexer. Tabellen mit Benchmark-Ergebnissen ermöglichen zwar einen direkten Zahlenvergleich, bieten jedoch nur einen begrenzten Überblick über Zusammenhänge zwischen verschiedenen Leistungsmerkmalen.
+
+Ziel dieses Projekts war die Entwicklung einer interaktiven 3D-Informationsvisualisierung, welche die Leistungsdaten aktueller KI-Sprachmodelle übersichtlich darstellt und durch verschiedene Interaktionsmöglichkeiten eine explorative Analyse ermöglicht.
+
+---
+
+# Visualisierte Daten
+
+Visualisiert werden Benchmark-Ergebnisse aktueller Large Language Models.
+
+Der Datensatz enthält unter anderem folgende Informationen:
+
+- Modellname
+- Entwickler
+- Open Weight / Proprietary
+- Overall Score
+- Coding
+- Knowledge
+- Agentic
+- Reasoning
+- Math
+- Multilingual
+- Multimodal Grounded
+- Instruction Following
+- Input- und Output-Preis
 
 ## Datenquelle
 
@@ -36,22 +44,91 @@ BenchLM Leaderboard
 
 https://benchlm.ai/
 
-## Lokales Testen
+---
 
-Im Projektverzeichnis einen einfachen HTTP-Server starten (ES-Module und das Laden der CSV-Datei benötigen HTTP):
+# Datenmapping
 
+Die Modelle werden als Kugeln im dreidimensionalen Raum dargestellt.
+
+| Visuelles Merkmal | Zugeordnete Daten |
+|-------------------|-------------------|
+| X-Achse           | Coding            |
+| Y-Achse           | Knowledge         |
+| Z-Achse           | Agentic           |
+| Kugelgröße        | Overall Score     |
+| Kugelfarbe        | Entwickler        |
+| Material          | Open / Proprietary|
+
+Die Achsen werden automatisch anhand der im Datensatz vorhandenen Minimal- und Maximalwerte skaliert.
+
+---
+
+# Interaktion
+
+Die Anwendung unterstützt verschiedene Interaktionsmöglichkeiten:
+
+- Drehen, Zoomen und Verschieben der Kamera
+- Auswahl eines Modells per Mausklick
+- Detailansicht eines ausgewählten Modells
+- Vergleich zweier Modelle mittels **Shift + Klick**
+- Hover-Tooltip mit Modellinformationen
+- Suchfunktion nach Modellnamen
+- Filter nach Entwickler
+- Filter nach Quelltyp
+- Filter nach Overall Score
+- Erweiterte Filter für Coding, Knowledge und Agentic
+- Zurücksetzen der Kamera auf die Ausgangsansicht
+- Anzeige der aktuell sichtbaren Modelle
+
+---
+
+# Aufbau des Projekts
+
+Die wichtigsten Dateien sind:
+
+- **index.html** – Benutzeroberfläche
+- **main.js** – Erstellung der 3D-Szene, Datenverarbeitung und Interaktionen
+- **style.css** – Gestaltung der Benutzeroberfläche
+- **data.csv** – Benchmark-Datensatz
+
+---
+
+# Verwendete Technologien
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- Three.js
+- OrbitControls
+
+---
+
+# Lokales Ausführen
+
+Da die Daten per `fetch()` geladen werden, muss die Anwendung über einen HTTP-Server gestartet werden.
+
+Beispiel mit Python:
+
+```bash
 python -m http.server 8000
+```
 
 Anschließend im Browser öffnen:
 
+```
 http://localhost:8000/
+```
 
-## Online-Version
+---
 
-Die Visualisierung ist über GitHub Pages erreichbar:
+# XR
 
-https://lucas-lhnr.github.io/llm-atlas-visualization/
+Für dieses Projekt wurde keine XR- oder VR-Erweiterung umgesetzt.
 
-## Lizenz / Hinweise
+---
 
-Die Benchmark-Daten stammen von der oben genannten Quelle. Dieses Repository dient der Visualisierung und dem Vergleich aktueller KI-Sprachmodelle. Bei Weiterverwendung der Daten bitte die ursprüngliche Quelle angeben.
+# Lizenz / Hinweise
+
+Die verwendeten Benchmark-Daten stammen vom BenchLM Leaderboard.
+
+Diese Anwendung dient ausschließlich der Visualisierung und dem Vergleich aktueller KI-Sprachmodelle. Bei Weiterverwendung der Daten sollte die ursprüngliche Quelle angegeben werden.
